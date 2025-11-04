@@ -24,6 +24,16 @@
       --max-width: 1080px;
     }
 
+    @keyframes float-slow {
+      0%, 100% { transform: translate3d(0, 0, 0); }
+      50% { transform: translate3d(0, -10px, 0); }
+    }
+
+    @keyframes badge-breathe {
+      0%, 100% { transform: translateY(0); box-shadow: 0 12px 26px rgba(12, 38, 96, 0.18); }
+      50% { transform: translateY(-5px); box-shadow: 0 18px 36px rgba(12, 38, 96, 0.22); }
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -100,6 +110,8 @@
       position: relative;
       overflow: hidden;
       z-index: 0;
+      transform-style: preserve-3d;
+      animation: float-slow 14s ease-in-out infinite;
     }
 
     .hero-panel::before {
@@ -172,9 +184,29 @@
       color: var(--navy-dark);
       box-shadow: 0 16px 34px rgba(12, 38, 96, 0.32);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
+      transform-style: preserve-3d;
     }
 
     .btn-main:hover { transform: translateY(-3px); box-shadow: 0 22px 40px rgba(12, 38, 96, 0.36); }
+
+    .btn-main::before {
+      content: "";
+      position: absolute;
+      top: -120%;
+      left: -40%;
+      width: 45%;
+      height: 320%;
+      background: linear-gradient(120deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 70%);
+      transform: translate3d(-120%, 0, 0);
+      transition: transform 0.5s ease;
+      pointer-events: none;
+    }
+
+    .btn-main:hover::before {
+      transform: translate3d(220%, 0, 0);
+    }
 
     .badge {
       display: inline-flex;
@@ -187,6 +219,7 @@
       letter-spacing: 0.06em;
       color: var(--navy);
       border: 1px solid rgba(12, 38, 96, 0.14);
+      animation: badge-breathe 11s ease-in-out infinite;
     }
 
     .first-lead {
@@ -311,7 +344,7 @@
     }
 
     .card, .voice-card, .faq-item, .profile-block, .timeline-step {
-      background: var(--white);
+      background: linear-gradient(135deg, rgba(12, 38, 96, 0.02), rgba(198, 162, 74, 0.08));
       border-radius: 20px;
       padding: 32px;
       border: 1px solid rgba(12, 38, 96, 0.08);
@@ -320,10 +353,26 @@
       position: relative;
       overflow: hidden;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
+      transform-style: preserve-3d;
     }
 
     .card,
     .voice-card { display: grid; gap: 18px; }
+
+    .card::before,
+    .voice-card::before,
+    .faq-item::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border-radius: 16px;
+      background: radial-gradient(circle at 30% 20%, rgba(198, 162, 74, 0.18), transparent 65%);
+      opacity: 0;
+      transform: scale(0.94);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+      pointer-events: none;
+      z-index: 0;
+    }
 
     .card::after,
     .voice-card::after,
@@ -336,6 +385,10 @@
       height: 6px;
       background: linear-gradient(135deg, rgba(198, 162, 74, 0.28), rgba(12, 38, 96, 0.18));
       pointer-events: none;
+      transform-origin: left;
+      transform: scaleX(0.7);
+      transition: transform 0.4s ease;
+      z-index: 1;
     }
 
     .card:hover,
@@ -347,9 +400,34 @@
       box-shadow: 0 24px 52px rgba(12, 38, 96, 0.16);
     }
 
+    .card:hover::before,
+    .voice-card:hover::before,
+    .faq-item:hover::before {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+
+    .card:hover::after,
+    .voice-card:hover::after,
+    .timeline-step:hover::after,
+    .faq-item:hover::after {
+      transform: scaleX(1.05);
+    }
+
     .voice-card::after { background: linear-gradient(135deg, rgba(198, 162, 74, 0.4), rgba(12, 38, 96, 0.22)); }
 
     .profile-block { display: grid; gap: 20px; justify-items: center; text-align: left; }
+
+    .card > *,
+    .voice-card > *,
+    .faq-item > *,
+    .timeline-step > *,
+    .profile-block > * { position: relative; z-index: 2; }
+
+    .card:hover .card-visual { transform: translateY(-6px) scale(1.02); }
+    .voice-card:hover .voice-visual { transform: translateY(-4px) scale(1.015); }
+    .evidence-visual:hover { transform: translateY(-6px) scale(1.01); }
+    .profile-block:hover .profile-visual { transform: translateY(-6px) scale(1.01); }
 
     .card-visual,
     .voice-visual,
@@ -368,6 +446,7 @@
       display: flex;
       align-items: stretch;
       justify-content: center;
+      transition: transform 0.35s ease;
     }
 
     .card-visual--weapon { background: linear-gradient(135deg, #e4efff, #f3f9ff); }
@@ -410,6 +489,7 @@
       align-items: stretch;
       justify-content: center;
       overflow: hidden;
+      transition: transform 0.35s ease;
     }
 
     @media (min-width: 960px) {
@@ -449,6 +529,7 @@
       position: relative;
       border-radius: 34px;
       padding: 20px;
+      transition: transform 0.35s ease;
     }
 
     .evidence-visual::before {
@@ -488,6 +569,7 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 24px 48px rgba(12, 38, 96, 0.12);
+      transition: transform 0.35s ease;
     }
 
     .profile-visual--square { aspect-ratio: 1 / 1; }
@@ -644,7 +726,8 @@
       font-size: 20px;
       color: var(--navy-dark);
       box-shadow: 0 12px 24px rgba(12, 38, 96, 0.18);
-      z-index: 1;
+      z-index: 2;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .timeline-step h4 { margin: 0 0 12px; font-size: 18px; color: var(--navy-dark); }
@@ -853,6 +936,36 @@
         font-size: 16px;
         box-shadow: 0 8px 18px rgba(12, 38, 96, 0.16);
       }
+    }
+
+    @media (hover: hover) {
+      .card:hover,
+      .voice-card:hover,
+      .timeline-step:hover,
+      .faq-item:hover,
+      .profile-block:hover {
+        transform: translateY(-8px) scale(1.01);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(233, 240, 255, 0.75));
+      }
+
+      .btn-main:hover { transform: translateY(-4px) scale(1.01); }
+
+      .timeline-step:hover::before {
+        transform: translate3d(0, -6px, 0) scale(1.08);
+        box-shadow: 0 20px 28px rgba(12, 38, 96, 0.24);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .hero-panel { animation: none; }
+      .badge { animation: none; }
+      .btn-main::before { display: none; }
     }
   </style>
 </head>
