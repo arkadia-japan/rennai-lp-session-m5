@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE ONLY ONE｜個別相談会ランディングページ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0c2660;
+      --navy-dark: #061539;
+      --sky: #eaf3ff;
+      --gold: #c6a24a;
+      --gold-light: #e9d28f;
+      --sand: #f8f1e1;
+      --beige: #f2ebdc;
+      --ivory: #fdfbf5;
+      --gray: #f4f5f7;
+      --text: #1f2440;
+      --subtext: #4d5273;
+      --white: #ffffff;
+      --max-width: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Noto Sans JP', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+      font-feature-settings: 'palt';
+      color: var(--text);
+      line-height: 1.9;
+      font-size: clamp(16px, 1.2vw, 19px);
+      background: linear-gradient(180deg, var(--ivory), var(--gray));
+      scroll-behavior: smooth;
+      padding-bottom: clamp(120px, 18vw, 160px);
+    }
+
+    p, li {
+      font-size: 1.05em;
+      letter-spacing: 0.015em;
+      color: var(--text);
+    }
+
+    strong {
+      color: var(--navy-dark);
+      font-weight: 700;
+    }
+
+    .lead-paragraphs p,
+    .card p,
+    .voice-card p,
+    .profile-block p,
+    .profile-block li,
+    .faq-item p {
+      font-size: 1.1em;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, h4 { font-weight: 700; line-height: 1.4; }
+
+    .container { width: min(var(--max-width), 90vw); margin: 0 auto; }
+
+    .hero {
+      background: linear-gradient(180deg, rgba(6, 21, 57, 0.82), rgba(6, 21, 57, 1));
+      padding: 0 0 clamp(80px, 12vw, 120px);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-visual { margin: 0; width: 100%; }
+    .hero-visual img { width: 100%; height: auto; display: block; }
+
+    .hero-inner {
+      position: relative;
+      width: min(var(--max-width), 90vw);
+      margin: clamp(32px, 7vw, 72px) auto 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-panel {
+      width: 100%;
+      max-width: 760px;
+      background: var(--white);
+      border-radius: 28px;
+      padding: clamp(36px, 6vw, 60px) clamp(28px, 6vw, 64px);
+      box-shadow: 0 26px 54px rgba(6, 21, 57, 0.25);
+      display: grid;
+      gap: 24px;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(12, 38, 96, 0.18);
+      background: rgba(12, 38, 96, 0.06);
+      letter-spacing: 0.12em;
+      font-size: 13px;
+      color: var(--navy);
+    }
+
+    .hero-panel h1 {
+      font-size: clamp(30px, 4.2vw, 46px);
+      letter-spacing: 0.04em;
+      margin: 0;
+      color: var(--navy-dark);
+    }
+
+    .hero-description {
+      margin: 0;
+      font-size: clamp(16px, 2.2vw, 18px);
+      color: var(--subtext);
+      max-width: 680px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-main {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 56px;
+      border-radius: 999px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy-dark);
+      box-shadow: 0 16px 34px rgba(12, 38, 96, 0.32);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-main:hover { transform: translateY(-3px); box-shadow: 0 22px 40px rgba(12, 38, 96, 0.36); }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 26px;
+      border-radius: 999px;
+      background: rgba(12, 38, 96, 0.08);
+      font-size: 14px;
+      letter-spacing: 0.06em;
+      color: var(--navy);
+      border: 1px solid rgba(12, 38, 96, 0.14);
+    }
+
+    .first-lead {
+      background: var(--white);
+      margin-top: -20px;
+      padding: 86px 0 64px;
+      border-radius: 32px 32px 0 0;
+      box-shadow: 0 -20px 44px rgba(12, 38, 96, 0.12);
+    }
+
+    .first-lead .lead-paragraphs {
+      gap: 20px;
+      color: var(--subtext);
+      font-size: 17px;
+    }
+
+    .section { padding: 88px 0; }
+    .section.light { background: var(--gray); }
+    .section.sky { background: linear-gradient(180deg, var(--sky), var(--white)); }
+    .section.navy { background: radial-gradient(circle at top, rgba(198, 162, 74, 0.18), transparent 60%), var(--navy); color: var(--white); }
+    .section.sand { background: var(--sand); }
+    .section.beige { background: var(--beige); }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 52px;
+      position: relative;
+    }
+
+    .section-title h2 {
+      font-size: clamp(26px, 3.4vw, 38px);
+      margin: 0;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 64px;
+      height: 3px;
+      margin: 24px auto 0;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .lead-paragraphs {
+      max-width: 780px;
+      margin: 0 auto;
+      display: grid;
+      gap: 24px;
+      font-size: 1.05em;
+      color: var(--subtext);
+    }
+
+    .section.navy .lead-paragraphs p,
+    .section.navy .lead-paragraphs li { color: rgba(255, 255, 255, 0.88); }
+    .section.navy .lead-paragraphs strong { color: var(--gold-light); }
+    .section.navy .voice-card p,
+    .section.navy .voice-card h4 { color: var(--navy-dark); }
+
+    .lead-paragraphs strong { color: var(--navy); }
+
+    .bullet-list {
+      max-width: 800px;
+      margin: 32px auto 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 18px;
+      color: var(--subtext);
+      font-size: 1.05em;
+    }
+
+    .bullet-list li {
+      position: relative;
+      padding-left: 1.8em;
+      line-height: 1.8;
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0.2em;
+      top: 0;
+      font-size: 1.6em;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+    }
+
+    .card, .voice-card, .faq-item, .profile-block, .timeline-step {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 32px;
+      border: 1px solid rgba(12, 38, 96, 0.08);
+      box-shadow: 0 18px 40px rgba(12, 38, 96, 0.08);
+      color: var(--text);
+    }
+
+    .profile-block { display: grid; gap: 20px; justify-items: center; text-align: left; }
+
+    .card-visual,
+    .voice-visual,
+    .profile-visual,
+    .evidence-visual {
+      border-radius: 18px;
+      overflow: hidden;
+      margin: 0 0 22px;
+      position: relative;
+    }
+
+    .card-visual {
+      height: 180px;
+      background: linear-gradient(135deg, #eef3ff, #faf7ff);
+      border: 1px solid rgba(12, 38, 96, 0.08);
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+    }
+
+    .card-visual--weapon { background: linear-gradient(135deg, #e4efff, #f3f9ff); }
+    .card-visual--graduate { background: linear-gradient(135deg, #f7eaff, #fff3f1); }
+    .card-visual--time { background: linear-gradient(135deg, #fff4e3, #fde7f3); }
+    .card-visual--confidence { background: linear-gradient(135deg, #e9fff5, #eaf0ff); }
+    .card-visual--authentic { background: linear-gradient(135deg, #fff2f2, #f9faff); }
+
+    .card-visual::after,
+    .voice-visual::after,
+    .evidence-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      box-shadow: inset 0 0 0 1px rgba(12, 38, 96, 0.06);
+      pointer-events: none;
+    }
+
+    .card-visual img,
+    .voice-visual img,
+    .profile-visual img,
+    .evidence-visual img,
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: inherit;
+    }
+
+    .voice-visual {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      margin: 0 auto 34px;
+      border-radius: 28px;
+      border: 3px solid rgba(255, 255, 255, 0.6);
+      background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(198, 196, 255, 0.35));
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    @media (min-width: 960px) {
+      .voice-visual { max-width: 420px; }
+    }
+
+    .voice-visual--idol { background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(198, 196, 255, 0.45)); }
+    .voice-visual--marriage { background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255, 209, 163, 0.45)); }
+    .voice-visual--connection { background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(167, 199, 255, 0.45)); }
+
+    .evidence-gallery {
+      display: grid;
+      gap: 28px;
+      margin: 48px auto 0;
+      max-width: 720px;
+    }
+
+    .evidence-intro {
+      display: grid;
+      gap: 18px;
+      margin-top: 36px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .evidence-caption {
+      font-size: 0.95em;
+      letter-spacing: 0.04em;
+      opacity: 1;
+      color: rgba(255, 255, 255, 0.94);
+    }
+
+    .evidence-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border-radius: 34px;
+      padding: 20px;
+    }
+
+    .evidence-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0));
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      box-shadow: 0 32px 64px rgba(12, 38, 96, 0.26);
+      pointer-events: none;
+    }
+
+    .evidence-visual--primary { background: linear-gradient(160deg, #f0f4ff, #dce6ff); }
+    .evidence-visual--secondary { background: linear-gradient(160deg, #fff3ea, #ffe3d6); }
+    .evidence-visual--tertiary { background: linear-gradient(160deg, #f1fff7, #dff7ea); }
+
+    .evidence-visual img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: 0 18px 38px rgba(12, 38, 96, 0.18);
+    }
+
+    .profile-visual {
+      width: min(360px, 100%);
+      margin: 0 auto 28px;
+      padding: 16px;
+      border-radius: 36px;
+      border: 3px solid rgba(198, 162, 74, 0.45);
+      background: rgba(255, 255, 255, 0.92);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 24px 48px rgba(12, 38, 96, 0.12);
+    }
+
+    .profile-visual--square { aspect-ratio: 1 / 1; }
+    .profile-visual--landscape { aspect-ratio: 16 / 9; }
+    .profile-visual--team { width: min(460px, 100%); background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(233, 240, 255, 0.92)); }
+    .profile-visual--overview { width: min(680px, 100%); }
+
+    .profile-visual img {
+      width: 100%;
+      height: 100%;
+      border-radius: 32px;
+      object-fit: cover;
+    }
+
+    .consultant-groups {
+      display: grid;
+      gap: 24px;
+      margin-top: 12px;
+    }
+
+    .consultant-group {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .consultant-heading { color: var(--navy-dark); font-weight: 700; font-size: 1.05em; }
+
+    .consultant-avatars {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .avatar {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 18px 30px rgba(12, 38, 96, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid rgba(198, 162, 74, 0.25);
+    }
+
+    .avatar--female-a { background: linear-gradient(135deg, #ffe1f1, #ffd7ff); }
+    .avatar--female-b { background: linear-gradient(135deg, #fbd9ff, #ffd6e8); }
+    .avatar--male-a { background: linear-gradient(135deg, #d8e8ff, #d2fff5); }
+    .avatar--male-b { background: linear-gradient(135deg, #cbe2ff, #e0fff6); }
+
+    .consultant-copy { color: var(--subtext); font-size: 0.98em; line-height: 1.7; }
+
+    .section.navy .voice-card {
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(198, 162, 74, 0.45);
+      border-radius: 28px;
+      box-shadow: 0 24px 48px rgba(12, 38, 96, 0.2);
+      color: var(--navy-dark);
+      position: relative;
+      overflow: hidden;
+      padding: 30px;
+    }
+
+    .section.navy .voice-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      pointer-events: none;
+    }
+
+    .section.navy .voice-card .voice-visual {
+      border: 3px solid rgba(198, 162, 74, 0.45);
+      box-shadow: 0 18px 36px rgba(12, 38, 96, 0.18);
+    }
+    .section.navy .evidence-visual { border-color: rgba(255, 255, 255, 0.35); background: rgba(6, 21, 57, 0.35); }
+
+    .card h3 { color: var(--navy-dark); font-size: 1.2em; margin: 0 0 18px; }
+    .card p { margin: 0; font-size: 1.05em; color: var(--subtext); }
+
+    .section.navy .card p,
+    .section.navy .card h3 { color: var(--white); }
+
+    .voice-card h4 { margin: 0 0 12px; font-size: 18px; color: var(--navy-dark); }
+    .voice-card p { margin: 0; color: var(--subtext); }
+
+    .cta-inline { margin: 56px auto 0; text-align: center; }
+    .cta-inline p { margin-top: 12px; font-size: 13px; color: var(--subtext); }
+
+    .cta-banner {
+      text-align: center;
+      padding: 52px 36px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0));
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.22);
+      backdrop-filter: blur(6px);
+      color: var(--white);
+    }
+
+    .cta-banner h3 { font-size: 26px; margin: 0 0 18px; color: var(--white); }
+    .cta-banner p { margin: 0 0 28px; color: rgba(255, 255, 255, 0.92); }
+
+    .profile {
+      display: grid;
+      gap: 28px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .profile-block ul {
+      margin: 0;
+      padding-left: 20px;
+      display: grid;
+      gap: 12px;
+      color: var(--subtext);
+      font-size: 1em;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 26px;
+      margin-top: 40px;
+    }
+
+    .timeline-step h4 { margin: 0 0 12px; font-size: 18px; color: var(--navy-dark); }
+    .timeline-step p { margin: 0; color: var(--subtext); }
+
+    .faq { display: grid; gap: 24px; }
+    .faq-item h4 { margin: 0 0 12px; font-size: 18px; color: var(--navy-dark); }
+    .faq-item p { margin: 0; color: var(--subtext); }
+
+    .quote-box {
+      background: var(--white);
+      border-left: 5px solid var(--gold);
+      padding: 28px 34px;
+      border-radius: 16px;
+      font-weight: 600;
+      text-align: center;
+      color: var(--navy-dark);
+      box-shadow: 0 12px 32px rgba(12, 38, 96, 0.12);
+    }
+
+    .footer {
+      background: linear-gradient(145deg, var(--navy-dark), #0e2f78);
+      color: #ffffff;
+      text-align: center;
+      padding: 44px 0;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+    }
+
+    .footer p,
+    .footer a { color: #ffffff; margin: 6px 0; }
+
+    .floating-footer {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(6, 21, 57, 0.96);
+      color: #ffffff;
+      padding: 18px clamp(18px, 5vw, 42px);
+      box-shadow: 0 -14px 36px rgba(6, 21, 57, 0.28);
+      border-top: 1px solid rgba(198, 162, 74, 0.35);
+      z-index: 1000;
+    }
+
+    .floating-footer__inner {
+      width: min(var(--max-width), 96vw);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: clamp(18px, 4vw, 48px);
+      flex-wrap: wrap;
+    }
+
+    .floating-footer__message {
+      display: grid;
+      gap: 6px;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+    }
+
+    .floating-footer__message strong {
+      font-size: 16px;
+      color: var(--gold-light);
+      letter-spacing: 0.08em;
+    }
+
+    .floating-footer__actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .floating-footer__countdown {
+      display: grid;
+      gap: 4px;
+      text-align: right;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .floating-footer__countdown-label {
+      letter-spacing: 0.12em;
+    }
+
+    .floating-footer__countdown-time {
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #ffffff;
+    }
+
+    .floating-footer__cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px clamp(28px, 5vw, 40px);
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy-dark);
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.08em;
+      box-shadow: 0 16px 32px rgba(12, 38, 96, 0.32);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .floating-footer__cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 40px rgba(12, 38, 96, 0.36);
+    }
+
+    .floating-footer--ended .floating-footer__cta {
+      pointer-events: none;
+      background: rgba(255, 255, 255, 0.24);
+      color: rgba(6, 21, 57, 0.6);
+      box-shadow: none;
+    }
+
+    .floating-footer--ended .floating-footer__cta:hover {
+      transform: none;
+    }
+
+    @media (max-width: 720px) {
+      .floating-footer {
+        padding: 12px clamp(10px, 5vw, 16px) 14px;
+      }
+
+      .floating-footer__inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+      }
+
+      .floating-footer__message {
+        text-align: left;
+        font-size: 12px;
+        letter-spacing: 0.02em;
+        gap: 2px;
+      }
+
+      .floating-footer__message strong {
+        font-size: 14px;
+      }
+
+      .floating-footer__message span {
+        display: none;
+      }
+
+      .floating-footer__actions {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .floating-footer__countdown {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        text-align: left;
+        font-size: 11px;
+      }
+
+      .floating-footer__cta {
+        flex: 1 1 auto;
+        padding: 12px 16px;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+      }
+
+      .floating-footer__countdown-label {
+        letter-spacing: 0.08em;
+      }
+
+      .floating-footer__countdown-time {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner { margin: clamp(24px, 6vw, 48px) auto 0; }
+      .hero-panel { padding: clamp(32px, 6vw, 48px); }
+    }
+
+    @media (max-width: 640px) {
+      .hero-inner { margin: 20px auto 0; }
+      .hero-panel { border-radius: 20px; padding: 32px 24px 36px; box-shadow: 0 18px 36px rgba(6, 21, 57, 0.18); }
+      .btn-main { width: 100%; }
+      .card, .voice-card, .faq-item, .profile-block, .timeline-step { padding: 26px; }
+      .section { padding: 64px 0; }
+      .first-lead { padding: 72px 0 52px; margin-top: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <picture class="hero-visual">
+      <source media="(max-width: 900px)" srcset="renai_session_sp.png">
+      <img src="renai_session_pc.png" alt="THE ONLY ONE 個別相談会のキービジュアル">
+    </picture>
+    <div class="hero-inner">
+      <div class="hero-panel">
+        <div class="hero-tag">THE ONLY ONE 個別相談会</div>
+        <h1>演じない恋愛で、本命の彼女と一生ものの関係を。</h1>
+        <p class="hero-description">テンプレ会話術に疲れた誠実な男性へ。60分で自然体のまま愛され、長期的なパートナーシップを育てる戦略を描き切ります。</p>
+        <div class="hero-cta">
+          <a class="btn-main" href="#entry">無料個別相談&戦略ロードマップに申し込む</a>
+          <div class="badge">【無料】戦略ロードマップ&個別相談｜毎月5名限定</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="first-lead">
+    <div class="container">
+      <div class="lead-paragraphs">
+        <p>頑張って盛り上げ役を演じたり、モテるフレーズを暗記したり…。そんな恋愛に違和感を覚えるなら、安心してください。<br>あなたの誠実さや繊細さこそが、本命女性を惹きつける最大の魅力になります。</p>
+        <p>『THE ONLY ONE』個別相談会は、自然体で深く愛し合える関係を築きたい男性のための専用プログラム。内面・外見・出会い方を丸ごと再設計し、唯一無二の恋愛戦略を描きます。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sky" id="benefits">
+    <div class="container">
+      <div class="section-title">
+        <h2>自然体で愛される恋愛が叶う7つの未来</h2>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <figure class="card-visual card-visual--authentic">
+            <picture>
+              <source srcset="assets/images/card-authentic.webp" type="image/webp">
+              <img alt="自然体で微笑むふたりのイメージ" loading="lazy" src="assets/images/card-authentic.jpg">
+            </picture>
+          </figure>
+          <h3>自然体の恋愛が日常になる</h3>
+          <p>作り込んだキャラを演じず、ありのままの自分で恋愛を楽しめます。素の言葉がそのまま相手の心に届く感覚を取り戻しましょう。</p>
+        </div>
+        <div class="card">
+          <figure class="card-visual card-visual--weapon">
+            <picture>
+              <source srcset="assets/images/card-weapon.webp" type="image/webp">
+              <img alt="自分の魅力を象徴する光のイメージ" loading="lazy" src="assets/images/card-weapon.jpg">
+            </picture>
+          </figure>
+          <h3>ピュアな自分を丸ごと受け止めてもらえる</h3>
+          <p>飾らない純粋さを肯定され、弱さや繊細さを見せても愛される関係が手に入ります。</p>
+        </div>
+        <div class="card">
+          <figure class="card-visual card-visual--graduate">
+            <picture>
+              <source srcset="assets/images/card-graduate.webp" type="image/webp">
+              <img alt="本命女性と向き合うイメージ" loading="lazy" src="assets/images/card-graduate.jpg">
+            </picture>
+          </figure>
+          <h3>本気で惚れた女性と付き合える</h3>
+          <p>失うのが怖いと感じるほど惹かれた女性と対等に向き合い、告白まで迷わず進める自信が宿ります。</p>
+        </div>
+        <div class="card">
+          <figure class="card-visual card-visual--confidence">
+            <picture>
+              <source srcset="assets/images/card-confidence.webp" type="image/webp">
+              <img alt="深い信頼で結ばれたふたりのイメージ" loading="lazy" src="assets/images/card-confidence.jpg">
+            </picture>
+          </figure>
+          <h3>心の深部でつながる長期的な関係</h3>
+          <p>表面的なやり取りで終わらず、価値観が共鳴するパートナーと長期的な絆を育てられます。</p>
+        </div>
+        <div class="card">
+          <figure class="card-visual card-visual--time">
+            <picture>
+              <source srcset="assets/images/card-time.webp" type="image/webp">
+              <img alt="笑顔でデートを楽しむイメージ" loading="lazy" src="assets/images/card-time.jpg">
+            </picture>
+          </figure>
+          <h3>デートが心から楽しくなる</h3>
+          <p>暗記したフレーズに頼る苦行は終わり。ふたりで過ごす時間そのものが幸せに感じられるようになります。</p>
+        </div>
+        <div class="card">
+          <figure class="card-visual card-visual--weapon">
+            <picture>
+              <source srcset="assets/images/card-weapon.webp" type="image/webp">
+              <img alt="力強く輝くコンパスのイメージ" loading="lazy" src="assets/images/card-weapon.jpg">
+            </picture>
+          </figure>
+          <h3>価値観を誇りを持って語れる</h3>
+          <p>自分の信念が整理され、堂々と価値観を伝えられるように。相手から尊敬される軸が備わります。</p>
+        </div>
+        <div class="card">
+          <figure class="card-visual card-visual--authentic">
+            <picture>
+              <source srcset="assets/images/card-authentic.webp" type="image/webp">
+              <img alt="生涯のパートナーシップを象徴するイメージ" loading="lazy" src="assets/images/card-authentic.jpg">
+            </picture>
+          </figure>
+          <h3>生涯寄り添うパートナーと出会える</h3>
+          <p>最期に涙してくれる唯一の女性と、深い信頼と愛情で結ばれたパートナーシップを築けます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="reality">
+    <div class="container">
+      <div class="section-title">
+        <h2>それでも現実は、まだ理想と遠い。</h2>
+      </div>
+      <div class="lead-paragraphs">
+        <p>理想はわかっているのに、恋愛の現場で自然体の自分を出すのは怖いまま。ふと気づけば心のどこかで“本当の自分を見せたら嫌われる”とブレーキを踏んでいます。</p>
+      </div>
+      <ul class="bullet-list">
+        <li>本音を隠し、相手に合わせたキャラを演じている自分に違和感が募る。</li>
+        <li>純粋な想いを伝えたら拒絶されるのではと恐れ、気持ちを抑え込んでしまう。</li>
+        <li>心から大切にしたい女性と出会えていない、または長く続けられていない。</li>
+        <li>付き合えても表面的な関係のまま終わり、深い絆を築く前に別れてしまう。</li>
+        <li>会話術やフレーズを暗記して臨む“修行のようなデート”に疲弊している。</li>
+        <li>自分の価値観を言語化できず、「自分なんて…」と卑下する癖が抜けない。</li>
+        <li>このまま一生孤独なのではと、不安を抱えたまま夜を迎えてしまう。</li>
+      </ul>
+      <div class="lead-paragraphs">
+        <p>だからYouTubeや教材で学び、マッチングアプリや結婚相談所、美容室や脱毛にも投資してきた。努力を重ねているのに成果がつながらないのは、あなたのせいではありません。</p>
+        <p><strong>もしかしたら、その努力が逆効果になっている可能性すらある。</strong>次は何を信じればいいのか分からない——そんな行き詰まりを感じているのなら、この先を読み進めてください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light" id="cause">
+    <div class="container">
+      <div class="section-title">
+        <h2>「モテる男」を追いかけるほど魅力がかき消される理由</h2>
+      </div>
+      <div class="lead-paragraphs">
+        <p>世の中の恋愛ノウハウは、華やかで外向的な男性を基準に設計されています。そこで提示される“モテる男”像を目指すほど、あなたは本来の価値観を封じ込めることになる。</p>
+        <p>テンプレ化された振る舞いを身につける→自分の感情を押し殺す→強みや価値観が曖昧になる→オリジナリティが失われる。結果として、女性からは「どこかで見たことがある人」だと思われてしまうのです。</p>
+        <p>今、女性が求めているのは量産型のモテ男ではなく、“この人じゃなきゃダメ”と言い切れる希少性。あなたが磨くべきはキャラ作りではなく、誠実さや価値観を軸にした唯一無二の存在感です。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="solution-unique">
+    <div class="container">
+      <div class="section-title">
+        <h2>唯一無二の男を目指す3つの設計図</h2>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <figure class="card-visual card-visual--authentic">
+            <picture>
+              <source srcset="assets/images/card-authentic.webp" type="image/webp">
+              <img alt="自然体で微笑むふたりのイメージ" loading="lazy" src="assets/images/card-authentic.jpg">
+            </picture>
+          </figure>
+          <h3>独自の魅力を構築する</h3>
+          <p>内面・外見・背景ストーリーまでを深掘りし、「あなたが自然体でいること」こそ最大の魅力だと伝わるブランドを作り込みます。</p>
+        </div>
+        <div class="card">
+          <figure class="card-visual card-visual--weapon">
+            <picture>
+              <source srcset="assets/images/card-weapon.webp" type="image/webp">
+              <img alt="自分の強みを象徴する光のイメージ" loading="lazy" src="assets/images/card-weapon.jpg">
+            </picture>
+          </figure>
+          <h3>強みが活きる出会い方を選ぶ</h3>
+          <p>3C分析を使って「どこで誰と出会うか」を再設計。あなたの価値観が響く場で、本命女性に出会える戦略を描きます。</p>
+        </div>
+        <div class="card">
+          <figure class="card-visual card-visual--confidence">
+            <picture>
+              <source srcset="assets/images/card-confidence.webp" type="image/webp">
+              <img alt="深くつながる会話のイメージ" loading="lazy" src="assets/images/card-confidence.jpg">
+            </picture>
+          </figure>
+          <h3>深層心理コミュニケーション</h3>
+          <p>相手の心の奥にある欲求を丁寧に引き出し、安心感と信頼を育てながら長期的な関係へと育む会話術を身につけます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section beige" id="pitfalls">
+    <div class="container">
+      <div class="section-title">
+        <h2>ノウハウを知っているのに成果が出ない3つの罠</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-step">
+          <h4>1. やるべきことが人によって違う</h4>
+          <p>目的地と現在地が異なれば、進むべき道も全く変わります。理想の彼女像・関係性・期限、そして年齢や恋愛経験まで整理しないまま動くと、努力が的外れになります。</p>
+        </div>
+        <div class="timeline-step">
+          <h4>2. フィードバックする人がいない</h4>
+          <p>失敗が放置されると、同じつまずきを何度も繰り返すだけ。近くにプロの視点がなければ、修正点が分からず時間だけが過ぎてしまいます。</p>
+        </div>
+        <div class="timeline-step">
+          <h4>3. メンタルが削られて挫折する</h4>
+          <p>恋愛の失敗は人格否定に近い痛みを伴います。強制力もなく、非モテ仲間ばかりの環境だと、先送りの沼から抜けられません。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="three-pillars">
+    <div class="container">
+      <div class="section-title">
+        <h2>突破口は「戦略・フィードバック・環境」の3本柱</h2>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <figure class="card-visual card-visual--time">
+            <picture>
+              <source srcset="assets/images/card-time.webp" type="image/webp">
+              <img alt="未来のロードマップのイメージ" loading="lazy" src="assets/images/card-time.jpg">
+            </picture>
+          </figure>
+          <h3>戦略</h3>
+          <p>あなた専用のロードマップを設計し、明日から何を積み上げれば理想の女性と出会い、関係を深められるかを明確にします。</p>
+        </div>
+        <div class="card">
+          <figure class="card-visual card-visual--graduate">
+            <picture>
+              <source srcset="assets/images/card-graduate.webp" type="image/webp">
+              <img alt="伴走するコーチのイメージ" loading="lazy" src="assets/images/card-graduate.jpg">
+            </picture>
+          </figure>
+          <h3>フィードバック</h3>
+          <p>実践のたびにプロが細かく振り返り、軌道修正をサポート。あなたの魅力が正しく伝わっているかをリアルタイムで確認します。</p>
+        </div>
+        <div class="card">
+          <figure class="card-visual card-visual--authentic">
+            <picture>
+              <source srcset="assets/images/card-authentic.webp" type="image/webp">
+              <img alt="安心できるコミュニティのイメージ" loading="lazy" src="assets/images/card-authentic.jpg">
+            </picture>
+          </figure>
+          <h3>環境</h3>
+          <p>同じ目標を持つ仲間と専門家が集う空間で、メンタル面までしっかり支えます。孤独に戦わず、継続できる土台を整えます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light" id="common-enemy">
+    <div class="container">
+      <div class="section-title">
+        <h2>間違った環境では、努力が逆効果になる</h2>
+      </div>
+      <div class="lead-paragraphs">
+        <p>「どこでもいい」は大きな誤解です。あなたに合わない戦略・フィードバック・環境を選べば、むしろ自信を失うスピードが早まります。</p>
+        <p>恋愛ノウハウの多くは、陽キャで外向的な人の成功体験をベースに作られています。彼らは自分がうまくいった方法だけを語り、内向的で誠実な男性が直面する壁には気づきません。</p>
+        <p>恋愛系YouTuberの華やかな情報を追いかけても、あなたの現実が変わらないのはそのため。賢いあなたなら、この矛盾にもう気づいているはずです。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="program-intro">
+    <div class="container">
+      <div class="section-title">
+        <h2>恋愛業界に危機感を抱いて生まれた『THE ONLY ONE』</h2>
+      </div>
+      <div class="lead-paragraphs">
+        <p>THE ONLY ONE 恋愛コンサルティングプログラムは、自然体で深く愛し合える関係を望む男性のための伴走型プログラム。恋愛業界のテンプレ営業やポジショントークから距離を置き、あなた自身の魅力を最大化することだけに集中します。</p>
+        <p>ここから紹介する特徴と実績は、すべて誠実な男性の恋愛を本気で変えてきた証拠です。あなたにも同じ未来が訪れることを、まずはイメージしてみてください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section navy">
+    <div class="container">
+      <div class="section-title">
+        <h2>あなたと同じような悩みを持っていた方が続々と成果を出してます</h2>
+      </div>
+      <!-- NOTE: Replace assets/images/voice-*.webp to swap testimonial visuals -->
+      <div class="voice-card">
+        <figure class="voice-visual voice-visual--idol">
+          <picture>
+
+            <source srcset="assets/images/voice-idol.webp" type="image/webp">
+
+            <img alt="スポットライトが輝くステージのイメージ" loading="lazy" src="assets/images/voice-idol.jpg">
+
+          </picture>
+        </figure>
+        <h4>CASE 1：「某有名アイドルグループの女性と、本命カップルに」<br><span style="font-weight:400; font-size:14px; opacity:0.9;">30代後半・自営業 Eさん</span></h4>
+        <p>参加前はアプリで出会えず友達どまり。<br>「もう今から恋愛は無理かも…」と自信を失っていたが、プログラム参加後、長年の“推し”だった<strong>某有名アイドルグループの女性 </strong>を射止めることに成功。<br>「自分を偽らずに個性を活かせば、こんな未来が待っているんですね」と喜びの声をいただきました。</p>
+      </div>
+      <div class="voice-card">
+        <figure class="voice-visual voice-visual--marriage">
+          <picture>
+
+            <source srcset="assets/images/voice-marriage.webp" type="image/webp">
+
+            <img alt="婚約指輪と柔らかな光のイメージ" loading="lazy" src="assets/images/voice-marriage.jpg">
+
+          </picture>
+        </figure>
+        <h4>CASE 2：「Withで超人気会員から逆告白され結婚」<br><span style="font-weight:400; font-size:14px; opacity:0.9;">30代前半・公務員 Oさん</span></h4>
+        <p>1年間アプリで成果ゼロの状態から、外見とプロフを抜本改善。アプリのいいね数が10倍以上になり、<strong>1000以上のいいねを持つ超人気女性から逆告白され結婚。</strong></strong></p>
+      </div>
+      <div class="voice-card">
+        <figure class="voice-visual voice-visual--connection">
+          <picture>
+
+            <source srcset="assets/images/voice-connection.webp" type="image/webp">
+
+            <img alt="心がつながる二人のイメージ" loading="lazy" src="assets/images/voice-connection.jpg">
+
+          </picture>
+        </figure>
+        <h4>CASE 3：「人生史上最高の彼女をゲットし心の奥深くでつながる関係に」<br><span style="font-weight:400; font-size:14px; opacity:0.9;">20代後半・会社員 Aさん</span></h4>
+        <p>コミュ力はあるのに友達止まり。<br>けいじ式メソッドを一つひとつ実践し、<strong>デートした女性の9割</strong>を口説けるように。<br>その結果、心が通じ合う最高の彼女をゲットした末に同棲中</p>
+      </div>
+      <div class="evidence-intro">
+        <div class="lead-paragraphs">
+          <p>その他にも「彼女ができた」「結婚できた」という報告が毎月のように届いています。<br>信じられないかもしれませんが、彼らもほんの数ヶ月前までは、あなたと同じ場所で一人悩んでいました。</p>
+        </div>
+        <p class="evidence-caption">以下は実際に届いた成果報告の一部です。</p>
+      </div>
+      <div class="evidence-gallery">
+        <figure class="evidence-visual evidence-visual--primary">
+          <picture>
+
+            <source srcset="assets/images/evidence-01.webp" type="image/webp">
+
+            <img alt="Evidence 01 実績スクリーンショット" loading="lazy" src="assets/images/evidence-01.jpg">
+
+          </picture>
+        </figure>
+        <figure class="evidence-visual evidence-visual--secondary">
+          <picture>
+
+            <source srcset="assets/images/evidence-02.webp" type="image/webp">
+
+            <img alt="Evidence 02 実績スクリーンショット" loading="lazy" src="assets/images/evidence-02.jpg">
+
+          </picture>
+        </figure>
+        <figure class="evidence-visual evidence-visual--tertiary">
+          <picture>
+
+            <source srcset="assets/images/evidence-03.webp" type="image/webp">
+
+            <img alt="Evidence 03 実績スクリーンショット" loading="lazy" src="assets/images/evidence-03.jpg">
+
+          </picture>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sand">
+    <div class="container">
+      <div class="section-title">
+        <h2>業界初！男性×女性のハイブリッド型コンサルティング</h2>
+      </div>
+      <div class="profile">
+        <div class="profile-block">
+          <figure class="profile-visual profile-visual--square" style="width:min(320px, 85%);">
+            <img src="profile.jpg" alt="恋愛戦略家けいじのプロフィール写真" loading="lazy">
+          </figure>
+          <h3>主宰者紹介｜けいじ<br><span style="font-size:14px; font-weight:400;">「いい人止まり」を“唯一無二”の魅力に変える恋愛戦略家</span></h3>
+          <ul>
+            <li><strong>原体験：</strong>26年間好きな女性には相手にされずいい人止まりの日々を過ごす。</li>
+            <li><strong>実績：</strong>月2本程度の更新でYouTube登録者数1万人超える人気チャンネルを運営。<br>誠実な男性に特化した日本初の恋愛コーチングプログラムで彼女ゲットや結婚など成果が続出している。</li>
+            <li><strong>再現性：</strong>総額1,000万円以上の自己投資と、250人の女性経験。<br>400人以上の恋愛コーチング経験から導き出した、再現性の高い恋愛ノウハウを提供。</li>
+          </ul>
+        </div>
+        <div class="profile-block">
+          <h3>恋愛業界で唯一のハイブリッド型サポート</h3>
+          <figure class="profile-visual profile-visual--team profile-visual--square" style="width:min(400px, 90%);">
+            <picture>
+
+              <source srcset="assets/images/team-support.webp" type="image/webp">
+
+              <img alt="男女コンサルタントチームが戦略を練る様子" loading="lazy" src="assets/images/team-support.jpg">
+
+            </picture>
+          </figure>
+          <p>一人のカリスマ講師に偏ったサポートではなく、各分野の専門コンサルタントスタッフがチームで伴走します。</p>
+          <div class="consultant-groups">
+            <!-- NOTE: Replace assets/images/consultant-*.webp with顔写真 -->
+            <div class="consultant-group consultant-group--female">
+              <p class="consultant-heading">美女コンサルタント陣：</p>
+              <div class="consultant-avatars">
+                <figure class="avatar avatar--female-a">
+                  <picture>
+
+                    <source srcset="assets/images/consultant-female-a.webp" type="image/webp">
+
+                    <img alt="女性コンサルタント A の写真" loading="lazy" src="assets/images/consultant-female-a.jpg">
+
+                  </picture>
+                </figure>
+                <figure class="avatar avatar--female-b">
+                  <picture>
+
+                    <source srcset="assets/images/consultant-female-b.webp" type="image/webp">
+
+                    <img alt="女性コンサルタント B の写真" loading="lazy" src="assets/images/consultant-female-b.jpg">
+
+                  </picture>
+                </figure>
+              </div>
+              <p class="consultant-copy">元モデル・元一流ホステスなどが女性視点からリアルな心理を共有。<br>優しくて情熱的な美女があなたが成果が出るまで寄り添います</p>
+            </div>
+            <div class="consultant-group consultant-group--male">
+              <p class="consultant-heading">男性コンサルタント陣：</p>
+              <div class="consultant-avatars">
+                <figure class="avatar avatar--male-a">
+                  <picture>
+
+                    <source srcset="assets/images/consultant-male-a.webp" type="image/webp">
+
+                    <img alt="男性コンサルタント A の写真" loading="lazy" src="assets/images/consultant-male-a.jpg">
+
+                  </picture>
+                </figure>
+                <figure class="avatar avatar--male-b">
+                  <picture>
+
+                    <source srcset="assets/images/consultant-male-b.webp" type="image/webp">
+
+                    <img alt="男性コンサルタント B の写真" loading="lazy" src="assets/images/consultant-male-b.jpg">
+
+                  </picture>
+                </figure>
+              </div>
+              <p class="consultant-copy">男性視点でのロジカルな恋愛戦略を提供します。<br>過去あなたと同じように恋愛に悩んでいたコンサルタントが、あなたと同じ視点で実践的なサポートが可能です。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+  <section class="section sky">
+    <div class="container">
+      <div class="section-title">
+        <h2>あなたも必ずこうなれる</h2>
+      </div>
+      <div class="lead-paragraphs">
+        <p>ここまでに紹介した成果は、特別な才能がある人だけの話ではありません。誠実さを大切にしてきたあなたなら、同じ未来を手に入れられます。</p>
+        <p>とはいえ、「本当に自分でも大丈夫なのか？」という不安がよぎるのも当然です。過去の失敗や遠回りが心に影を落としているのなら、なおさら慎重になるはず。</p>
+        <p>だからこそ今回は、迷いを断ち切るための特別な機会を用意しました。ここから先は、あなたが本気で変わるための具体的な一歩です。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>たったの60分であなたが本命彼女を手に入れる恋愛戦略を設計します</h2>
+      </div>
+      <div class="lead-paragraphs">
+        <p>3本柱の中でも最優先で整えるべきなのが<strong>戦略</strong>です。ここを踏み外すと、どれだけ努力しても間違った方向へ進み続け、結果は永遠に出ません。残念ながら9割の男性がこの地点でつまずいてしまっています。</p>
+        <p>あなたには同じ遠回りをしてほしくない——その思いから、今回の個別相談会では戦略の壁をその場で取り払う機会を用意しました。60分で理想の彼女と出会い、深い関係を築くためのロードマップを一緒に描きます。</p>
+        <p><strong>なぜ無料なのか？</strong><br>優しくて誠実な男性が魅力的になることで、幸せな女性が増えると本気で信じているからです。そして、このページを読んでいるあなたにはその可能性が極めて高いと感じています。ただし個別で伴走できる人数には限りがあります。だからこそ今だけの期間限定で開放しています。</p>
+      </div>
+      <div class="profile-block" style="margin-top:40px;">
+        <h3>個別相談会 概要</h3>
+        <figure class="profile-visual profile-visual--overview profile-visual--landscape">
+          <picture>
+
+            <source srcset="assets/images/consultation-overview.webp" type="image/webp">
+
+            <img alt="個別相談会概要のイメージ" loading="lazy" src="assets/images/consultation-overview.jpg">
+
+          </picture>
+        </figure>
+        <ul>
+          <li><strong>形式：</strong>Zoomを使ったオンライン個別セッション</li>
+          <li><strong>時間：</strong>あなたの悩みと向き合う濃密な60分</li>
+          <li><strong>料金：</strong>通常10,000円 → このページをご覧のあなただけ<strong>完全無料</strong></li>
+        </ul>
+      </div>
+      <div class="lead-paragraphs" style="margin-top:32px;">
+        <p><strong>相談会で得られるもの</strong><br>あなたの現状を丁寧にヒアリングし、戦略・フィードバック・環境の優先順位を明確にします。営業目的ではなく、お互いのミスマッチを防ぐための対話です。必要がなければ、こちらから勧誘することは一切ありません。</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-step">
+          <h4>1. あなたの現状と課題の明確化</h4>
+          <p>なぜあなたの恋愛がうまくいかないのか？プロの視点で根本原因を特定。的外れな努力に終止符を打ちましょう。</p>
+        </div>
+        <div class="timeline-step">
+          <h4>2. あなただけの“武器”の発見</h4>
+          <p>あなたの価値観や個性を丁寧にヒアリングし、どうすれば「他の男にはない絶対的な魅力」として伝わるのかを明らかにします。</p>
+        </div>
+        <div class="timeline-step">
+          <h4>3. 成果を出すまでのロードマップを作成</h4>
+          <p>大事なのは、成果を出すまでに明日から何をすべきか？です。再現性の高い具体的なアクションプランを提示します。</p>
+        </div>
+      </div>
+      <div class="section-title" style="margin-top:64px;">
+        <h2>個別相談会 参加者の声</h2>
+      </div>
+      <div class="card-grid">
+        <div class="voice-card">
+          <h4>「僕が本当にやるべきだったのは、“誰かの真似”ではなく“自分の深掘り”でした」<br><span style="font-weight:400; font-size:14px;">32歳・メーカー勤務 T.Sさん</span></h4>
+          <p>「無料だから勧誘があるだろう」と半信半疑でしたが、60分間真剣に話を聞いてくれ、自分では気づかなかった魅力を提示してくれました。何をすべきかが明確になり、1年間迷っていた時間より価値がありました。」</p>
+        </div>
+        <div class="voice-card">
+          <h4>「“いい人”の呪いを解くカギは、自分の中にありました」<br><span style="font-weight:400; font-size:14px;">28歳・公務員 K.Nさん</span></h4>
+          <p>「優しいよね」と言われるたび落ち込んでいたが、「それは才能です」と言われ、魅力として伝える具体策を得られました。無理に演じる必要がないと分かり、心が軽くなりました。</p>
+        </div>
+        <div class="voice-card">
+          <h4>「恋愛経験ゼロの僕でも、進むべき道がハッキリ見えました」<br><span style="font-weight:400; font-size:14px;">25歳・ITエンジニア R.Mさん</span></h4>
+          <p>相談すること自体が不安でしたが、丁寧なヒアリングで「まずはここから」を地図のように示してくれました。「これならできる」と自信が持てました。</p>
+        </div>
+        <div class="voice-card">
+          <h4>「口下手は欠点ではなく“個性”なんですね」<br><span style="font-weight:400; font-size:14px;">35歳・研究職 A.Yさん</span></h4>
+          <p>面白い話ができない自分にコンプレックスがありましたが、聞き上手であることが魅力だと教えてもらい、プロフ文の書き方まで指導いただきました。自分のままでいいと許可をもらえた気持ちです。</p>
+        </div>
+        <div class="voice-card">
+          <h4>「“もう年だから”と諦めていた自分を殴ってやりたいです」<br><span style="font-weight:400; font-size:14px;">41歳・自営業 S.Iさん</span></h4>
+          <p>厳しいことを言われるかと構えていましたが、年齢や経験が「信頼感」「安心感」という武器になると教えてもらえました。寄り添いながら戦い方を一緒に考えてくれたことが嬉しかったです。</p>
+        </div>
+      </div>
+      <div class="cta-inline" style="margin-top:64px;">
+        <a class="btn-main" href="#entry">【無料】60分で恋愛が変わる戦略ロードマップを手に入れる</a>
+        <p>※毎月5名様限定・定員に達し次第終了</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sand">
+    <div class="container">
+      <div class="section-title">
+        <h2>恋愛に優先順位を置くべき理由</h2>
+      </div>
+      <div class="lead-paragraphs">
+        <p>恋愛は人生の中でもっとも優先順位の高いテーマです。パートナーシップが整えば、仕事も人間関係も驚くほどスムーズに回り始めます。</p>
+        <p>恋愛には賞味期限があります。今感じているトキメキも出会える可能性も、時間が経つほど薄れていく。先送りにするほど選択肢は狭まってしまいます。</p>
+        <p>お金を稼ぐには膨大な集中力が必要ですが、恋愛の悩みを抱えたままだと集中できません。逆に、お金だけを先に手にしても恋愛で失う危険があるし、「愛なのかお金なのか」疑心暗鬼な関係になりかねません。著名投資家の青汁王子も同じことを語っています。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="value">
+    <div class="container">
+      <div class="section-title">
+        <h2>恋愛への投資が人生に生むリターン</h2>
+      </div>
+      <div class="lead-paragraphs">
+        <p>恋愛で人生を破滅させてしまう人は少なくありません。詐欺や不倫、裁判や性搾取に巻き込まれ、時間・お金・エネルギーを根こそぎ奪われてしまうケースが山ほどあります。</p>
+      </div>
+      <ul class="bullet-list">
+        <li>詐欺・不倫・裁判沙汰に発展し、大切な時間と資産を失う。</li>
+        <li>ポルノ・キャバクラ・風俗・パパ活に依存し、心とお金が摩耗する。</li>
+        <li>集中力や自信を失い、仕事や人間関係まで負の連鎖に陥る。</li>
+      </ul>
+      <div class="lead-paragraphs">
+        <p>一方で、本命の女性と健全な関係を築ければ、自分軸、深いつながり、成果を生む習慣が身につき、仕事・友人関係・趣味すべてが好循環に入ります。結婚は家よりも高い買い物とも言われるほど、パートナー選びの影響は絶大です。</p>
+        <p><strong>過去に胸が張り裂けそうなほど好きになった女性がいたはずです。</strong>もしその女性を手に入れられるとしたら、あなたはいくら投資しますか？ その答えが、今この瞬間の決断を後押ししてくれるはずです。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section navy">
+    <div class="container">
+      <div class="section-title">
+        <h2>なぜ、このプログラムを創ったのか？</h2>
+      </div>
+      <div class="lead-paragraphs">
+        <p>世の中平等ではありません。でも、<strong>「優しくて誠実な人が苦しんでるのっておかしくない？」</strong><br>そんなシンプルな問いからすべては始まりました。<br>僕も26年間誠実さを武器として使えず、ずーっと“いい人止まり”の状態でした。女性に誠実に向き合っているのに、クズでチャラい男にすべてを奪われてしまう。あの屈辱と絶望感は今でも忘れられません。</p>
+        <p>悔しさから恋愛工学にのめり込み、250人以上の女性と関係を持つナンパ中毒に。<br>しかしその先にあったのは「これは本当の幸せじゃない」という虚無感だけ。<br>その後、今の妻と出会い、一人の女性を心から愛することこそが幸せな人生に繋がるんだと気づきました。</p>
+        <p>その経験から強く断言できることがあります。<br>それは、<strong>誠実で優しい人だからこそ1人の女性を幸せにできる、いやしなければならない</strong><br>それが僕の一生をかけた使命だと思ってます。<br>そんな想いからコーチングや心理学を学び直し、誠実さを最強の武器に変える『THE ONLY ONE』メソッドが誕生しました。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>迷っている間に、未来のパートナーはライバルに奪われている</h2>
+      </div>
+      <div class="lead-paragraphs">
+        <p>今、多くの女性たちが表面的な魅力やテクニック頼みの薄っぺらい男性との関係に疲れ果ててます。<br>彼女たちは<strong>誠実で安心できる男性</strong>を渇望してるんです。</p>
+        <p>あなたが迷っているこの瞬間にも、中身の伴わないテクニックだけを覚えた自己中心的な男たちがアプローチをかけています。<br>このままでは、あなたが本来出会うはずだった清楚で美しい女性たちが、彼らに汚されていってしまう。</p>
+        <p>このまま何もしなければ、数年後には孤独と「あの時、一歩踏み出していれば…」という後悔しか残りません。<br>この個別相談会は、そんな最悪の未来を断ち切り、あなたが彼女たちに“見つけてもらう”ための<strong>人生を変える最初の一歩</strong>です。</p>
+        <p>もちろん無理な勧誘は一切ありません。満足いただけなければ退出していただいて構いません。<br>行動したことであなたが失うものは何もありません。失う可能性があるのは、手に入るはずだった幸せな未来だけです。</p>
+      </div>
+      <div class="cta-inline" style="margin-top:56px;">
+        <a class="btn-main" href="#entry">【無料・毎月5名限定】理想の未来への第一歩を踏み出す</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section beige" id="faq">
+    <div class="container">
+      <div class="section-title">
+        <h2>よくある質問</h2>
+        <p>無料個別相談とプログラムについての疑問に正直にお答えします。</p>
+      </div>
+      <h3 style="text-align:center; margin-bottom:32px;">▼ 無料個別相談について</h3>
+      <div class="faq">
+        <div class="faq-item">
+          <h4>Q. 本当に無料ですか？後から料金を請求されたりしませんか？</h4>
+          <p>A. はい、完全に無料です。この60分で料金が発生することは一切ありませんので、ご安心ください。</p>
+        </div>
+        <div class="faq-item">
+          <h4>Q. 強い勧誘をされそうで、少し怖いです…</h4>
+          <p>A. あなたの意思を最優先します。無理な勧誘は一切行いません。むしろ私たちが「このプログラムは合わない」と判断した場合には、お断りすることもあります。</p>
+        </div>
+        <div class="faq-item">
+          <h4>Q. 特に準備するものは？恋愛経験が少なく話すのが苦手です。</h4>
+          <p>A. 特別な準備は不要です。話すのが苦手でも問題ありません。私たちが丁寧に引き出していきますので、ありのままのあなたでご参加ください。</p>
+        </div>
+        <div class="faq-item">
+          <h4>Q. Zoomを使ったことがなく、顔出しにも抵抗があります。</h4>
+          <p>A. 操作方法は丁寧にご案内します。顔出しが難しい場合は音声のみでの参加も可能です。安心できる形でご参加ください。</p>
+        </div>
+      </div>
+      <h3 style="text-align:center; margin:56px 0 32px;">▼ 『THE ONLY ONE』プログラムについて</h3>
+      <div class="faq">
+        <div class="faq-item">
+          <h4>Q. 内向的なタイプでも、本当に成果は出ますか？</h4>
+          <p>A. はい。このプログラムは誠実で内向的な方にこそ最大の効果を発揮するよう設計されています。他の恋愛講座が合わなかった方ほど試してください。</p>
+        </div>
+        <div class="faq-item">
+          <h4>Q. 仕事が不規則で忙しいのですが、続けられますか？</h4>
+          <p>A. オンライン完結型のため、ご自身のペースで進められます。個別コンサルもスケジュールに合わせて柔軟に調整可能です。</p>
+        </div>
+        <div class="faq-item">
+          <h4>Q. どのくらいの期間で効果が出ますか？</h4>
+          <p>A. 早い方で1ヶ月以内にマッチング率が劇的に向上。多くの方が3〜6ヶ月で本命の女性との関係構築という成果を出しています。</p>
+        </div>
+        <div class="faq-item">
+          <h4>Q. すぐ始めるつもりはないのですが、それでも参加して良いですか？</h4>
+          <p>A. もちろんです。ただし多くの方が「もっと早く知っていれば」と後悔されます。恋愛市場の競争は年々激化しています。現状を把握するだけでも大きな差が生まれます。</p>
+        </div>
+        <div class="faq-item">
+          <h4>Q. 高額な費用を払う決心がつきません。</h4>
+          <p>A. だからこそ無料個別相談をご用意しています。この60分で価値を感じなければ一切費用はかかりません。厳しく見極めてください。</p>
+        </div>
+        <div class="faq-item">
+          <h4>Q. まずは自分でやってみて、それでもダメなら検討したいです。</h4>
+          <p>A. その姿勢は素晴らしいです。ただ「正しい地図」を持たずに自己流で進むと、時間を浪費するリスクがあります。この相談会は、自己流が正しい方向に向かっているかを確かめる場としても活用できます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="closure">
+    <div class="container">
+      <div class="section-title">
+        <h2>最後に、ここまで読んでくれたあなたへ伝えたいこと</h2>
+      </div>
+      <div class="lead-paragraphs">
+        <p>ここまで読んでいただきありがとうございます。多くの人が恋愛の重要性を甘く見ています。結婚するパートナー選びは、家を買うよりも重要な決断です。「家は一生で一番大きな買い物」と言いますが、たとえどんな家でも楽しく生活できます。しかしパートナー選びを間違えると、人生に大きな影響を及ぼします。</p>
+        <p>パートナー選びの価値は<strong>数千万円する家よりも大きい</strong>。それに気づかず「この人でいいか」と結婚し、離婚したりATMとして扱われたりする人が後を絶ちません。だからこそ今から恋愛を攻略し、結婚したいと思ったときに最適な選択ができる準備をしておく必要があります。</p>
+        <p>私たちのプログラムで得られるのは、マッチングアプリやコミュニケーションのスキルだけではありません。<strong>・どんな人生を歩みたいのか ・譲れない価値観は何か ・どんなパートナーを選ぶべきか</strong>という人生レベルの意思決定軸を手に入れられます。これこそ、最も学んでほしいことです。</p>
+        <p>私のミッションは<strong>「愛する1人の女性を幸せにできる男」を増やすこと</strong>。自己中心的な恋愛が溢れる社会で、誠実な男性を求める女性が救いを求めています。あなたの誠実さや優しさは、後世に残すべき貴重な遺伝子です。</p>
+        <p>あなたが恋愛を諦めることは、もうあなただけの問題ではありません。本来幸せにするはずだった女性や、あなたから始まる家族の未来が失われるかもしれない。大げさに聞こえるかもしれませんが、これは紛れもない事実です。</p>
+        <p>自分の本当の欲求に正直になり、本命の女性を手に入れるために覚悟を決める。その小さな一歩が、あなた自身と周りの世界を確実に良い方向へと変えていきます。けれど一人でそこに辿り着くのは険しい道。だから、僕と一緒にリーダーとして人生の舵を取り戻しませんか？</p>
+        <p>これは単なる恋愛講座への誘いではありません。孤独と後悔に満ちた未来に終止符を打ち、貢献と幸福に満ちた人生を共に創っていくための<strong>同志への招待状</strong>です。会場で、あなたの本音を聞けることを心から楽しみにしています。</p>
+        <p style="text-align:right;">けいじ</p>
+      </div>
+      <div class="quote-box">
+        <strong>【本日締切】無料で人生を変える、最後のチャンスを掴む</strong>
+      </div>
+      <div class="cta-inline" style="margin-top:36px;">
+        <a class="btn-main" href="#entry">無料個別相談に申し込む</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section navy" id="entry">
+    <div class="container">
+      <div class="cta-banner">
+        <h3>【毎月5名様限定】無料個別相談 &amp; 戦略ロードマップ</h3>
+        <p>孤独と後悔に終止符を打ち、誠実さを最強の武器に変える60分。迷いを手放し、自分だけの恋愛戦略を手に入れてください。</p>
+        <a class="btn-main" href="https://arkadia-japan.com/p/format_css?item_id=Q9JMsNXf&amp;format=div&amp;form_align=&amp;label_align=&amp;radio_float=&amp;checkbox_float=&amp;label_width=0&amp;input_width=0&amp;theme_name=3_7&amp;ver=3" target="_blank" rel="noopener">今すぐ申し込む</a>
+        <p style="margin-top:16px; font-size:13px; opacity:0.95; color:var(--white);">※定員に達し次第、予告なく募集を終了いたします</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="floating-footer" id="floating-footer" role="complementary" aria-label="無料相談会申し込み案内">
+    <div class="floating-footer__inner">
+      <div class="floating-footer__message">
+        <strong>【本日締切】無料個別相談は先着順です</strong>
+        <span>残枠が埋まる前に、今すぐお申し込みください。</span>
+      </div>
+      <div class="floating-footer__actions">
+        <div class="floating-footer__countdown" aria-live="polite">
+          <span class="floating-footer__countdown-label">募集終了まで</span>
+          <span class="floating-footer__countdown-time" id="countdown-timer">12:00:00</span>
+        </div>
+        <a class="floating-footer__cta" href="https://arkadia-japan.com/p/format_css?item_id=Q9JMsNXf&amp;format=div&amp;form_align=&amp;label_align=&amp;radio_float=&amp;checkbox_float=&amp;label_width=0&amp;input_width=0&amp;theme_name=3_7&amp;ver=3" target="_blank" rel="noopener">無料相談に申し込む</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>THE ONLY ONE 個別相談会｜運営：けいじ</p>
+      <p>Copyright © THE ONLY ONE. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const countdownEl = document.getElementById('countdown-timer');
+      const footerEl = document.getElementById('floating-footer');
+      const ctaEl = footerEl ? footerEl.querySelector('.floating-footer__cta') : null;
+      if (!countdownEl || !footerEl) {
+        return;
+      }
+
+      const STORAGE_KEY = 'the-only-one-floating-footer-deadline';
+      const DURATION = 12 * 60 * 60 * 1000; // 12 hours in milliseconds
+      const now = Date.now();
+      let deadline = now + DURATION;
+
+      try {
+        const storedValue = window.localStorage.getItem(STORAGE_KEY);
+        if (storedValue) {
+          const parsed = parseInt(storedValue, 10);
+          if (!Number.isNaN(parsed) && parsed > now) {
+            deadline = parsed;
+          } else {
+            deadline = now + DURATION;
+            window.localStorage.setItem(STORAGE_KEY, String(deadline));
+          }
+        } else {
+          window.localStorage.setItem(STORAGE_KEY, String(deadline));
+        }
+      } catch (error) {
+        deadline = now + DURATION;
+      }
+
+      const formatTime = function (ms) {
+        const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+        const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+        const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+        const seconds = String(totalSeconds % 60).padStart(2, '0');
+        return hours + ':' + minutes + ':' + seconds;
+      };
+
+      const finalize = function () {
+        countdownEl.textContent = '00:00:00';
+        footerEl.classList.add('floating-footer--ended');
+        if (ctaEl) {
+          ctaEl.setAttribute('aria-disabled', 'true');
+          ctaEl.textContent = '受付は終了しました';
+        }
+        try {
+          window.localStorage.removeItem(STORAGE_KEY);
+        } catch (error) {
+          // localStorage unavailable, nothing else to do
+        }
+      };
+
+      const tick = function () {
+        const remaining = deadline - Date.now();
+        if (remaining <= 0) {
+          finalize();
+          window.clearInterval(intervalId);
+          return;
+        }
+        countdownEl.textContent = formatTime(remaining);
+      };
+
+      tick();
+      const intervalId = window.setInterval(tick, 1000);
+
+      document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState === 'visible') {
+          tick();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
