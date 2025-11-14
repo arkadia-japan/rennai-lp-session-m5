@@ -354,6 +354,12 @@
       align-items: stretch;
     }
 
+    .section.sky .card-grid { grid-template-columns: 1fr; }
+
+    @media (min-width: 768px) {
+      .section.sky .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
     .card, .voice-card, .faq-item, .profile-block, .timeline-step {
       background: linear-gradient(135deg, rgba(12, 38, 96, 0.02), rgba(198, 162, 74, 0.08));
       border-radius: 20px;
@@ -461,10 +467,18 @@
     }
 
     .card-visual--weapon { background: linear-gradient(135deg, #e4efff, #f3f9ff); }
+    .card-visual--values { background: linear-gradient(135deg, #e4efff, #f3f9ff); }
+    .card-visual--unique-path { background: linear-gradient(135deg, #e4efff, #f3f9ff); }
     .card-visual--graduate { background: linear-gradient(135deg, #f7eaff, #fff3f1); }
+    .card-visual--pillar-feedback { background: linear-gradient(135deg, #f7eaff, #fff3f1); }
     .card-visual--time { background: linear-gradient(135deg, #fff4e3, #fde7f3); }
+    .card-visual--pillar-strategy { background: linear-gradient(135deg, #fff4e3, #fde7f3); }
     .card-visual--confidence { background: linear-gradient(135deg, #e9fff5, #eaf0ff); }
+    .card-visual--unique-communication { background: linear-gradient(135deg, #e9fff5, #eaf0ff); }
     .card-visual--authentic { background: linear-gradient(135deg, #fff2f2, #f9faff); }
+    .card-visual--pillar-environment { background: linear-gradient(135deg, #fff2f2, #f9faff); }
+    .card-visual--unique-charm { background: linear-gradient(135deg, #fff2f2, #f9faff); }
+    .card-visual--partner { background: linear-gradient(135deg, #fff2f2, #f9faff); }
 
     .card-visual::after,
     .voice-visual::after,
@@ -1020,7 +1034,7 @@
   <section class="section sky" id="benefits">
     <div class="container">
       <div class="section-title">
-        <h2>自然体で愛される恋愛が叶う7つの未来</h2>
+        <h2>THE ONLY ONEメソッドで叶う恋愛の未来</h2>
       </div>
       <div class="card-grid">
         <div class="card">
@@ -1030,7 +1044,7 @@
               <img alt="自然体で微笑むふたりのイメージ" loading="lazy" src="assets/images/card-authentic.jpg">
             </picture>
           </figure>
-          <h3>自分を偽らず、自然体で恋愛がしたい</h3>
+          <h3>自分を偽らず、自然体で恋愛ができる</h3>
           <p>無理にキャラを作らなくても、素のままのあなたが魅力として伝わる状態へ。肩の力を抜いて恋愛を楽しめる未来を描きます。</p>
         </div>
         <div class="card">
@@ -1040,7 +1054,7 @@
               <img alt="自分の魅力を象徴する光のイメージ" loading="lazy" src="assets/images/card-weapon.jpg">
             </picture>
           </figure>
-          <h3>純粋でピュアな本当の自分を受け入れてほしい</h3>
+          <h3>純粋でピュアな本当の自分を受け入れてもらえる恋愛ができる</h3>
           <p>抑えてきた感情や繊細さを隠さずに、ありのまま愛してくれる女性と出会い、安心して想いを伝えられる関係を手に入れます。</p>
         </div>
         <div class="card">
@@ -1050,7 +1064,7 @@
               <img alt="本命女性と向き合うイメージ" loading="lazy" src="assets/images/card-graduate.jpg">
             </picture>
           </figure>
-          <h3>失うのが怖いくらい好きになった女性と付き合いたい</h3>
+          <h3>失うのが怖いくらい好きになった女性と付き合える</h3>
           <p>いつかは…と見送ってきた本命女性に、堂々と想いを伝えられる戦略と自信を備え、真剣な恋が実る瞬間を迎えます。</p>
         </div>
         <div class="card">
@@ -1060,7 +1074,7 @@
               <img alt="深い信頼で結ばれたふたりのイメージ" loading="lazy" src="assets/images/card-confidence.jpg">
             </picture>
           </figure>
-          <h3>付き合った女性と心の奥で深く繋がり長期的な関係を築きたい</h3>
+          <h3>付き合った女性と心の奥で深く繋がり長期的な関係を築ける</h3>
           <p>表面的な関係で終わらず、お互いの価値観と未来を共有できる長期的なパートナーシップを構築します。</p>
         </div>
         <div class="card">
@@ -1070,27 +1084,27 @@
               <img alt="笑顔でデートを楽しむイメージ" loading="lazy" src="assets/images/card-time.jpg">
             </picture>
           </figure>
-          <h3>苦行のようなデートはやめて心の底からデートを楽しみたい</h3>
+          <h3>苦行のようなデートをやめて心の底からデートを楽しめる</h3>
           <p>暗記した会話やテンション作りに頼らず、会いたい人と心から笑い合えるデートが当たり前になります。</p>
         </div>
         <div class="card">
-          <figure class="card-visual card-visual--weapon">
+          <figure class="card-visual card-visual--values">
             <picture>
-              <source srcset="assets/images/card-weapon.webp" type="image/webp">
-              <img alt="力強く輝くコンパスのイメージ" loading="lazy" src="assets/images/card-weapon.jpg">
+              <source srcset="assets/images/card-values.webp" type="image/webp">
+              <img alt="力強く輝くコンパスのイメージ" loading="lazy" src="assets/images/card-values.jpg">
             </picture>
           </figure>
-          <h3>自分の価値観に誇りを持って堂々と伝えられるようになりたい</h3>
+          <h3>自分の価値観に誇りを持ち堂々と伝えられるようにできる</h3>
           <p>「自分なんて…」と卑下してきた価値観を整え、胸を張って語れる芯の強さを育てます。</p>
         </div>
         <div class="card">
-          <figure class="card-visual card-visual--authentic">
+          <figure class="card-visual card-visual--partner">
             <picture>
-              <source srcset="assets/images/card-authentic.webp" type="image/webp">
-              <img alt="生涯のパートナーシップを象徴するイメージ" loading="lazy" src="assets/images/card-authentic.jpg">
+              <source srcset="assets/images/card-partner.webp" type="image/webp">
+              <img alt="生涯のパートナーシップを象徴するイメージ" loading="lazy" src="assets/images/card-partner.jpg">
             </picture>
           </figure>
-          <h3>死ぬ前に悲しんでくれる一生涯のパートナーがほしい</h3>
+          <h3>死ぬ前に悲しんでくれる一生涯のパートナーと結ばれることができる</h3>
           <p>最期まで支え合えるたった一人の女性と出会い、互いを深く信頼できる生涯のパートナーシップを育みます。</p>
         </div>
       </div>
@@ -1100,10 +1114,7 @@
   <section class="section" id="reality">
     <div class="container">
       <div class="section-title">
-        <h2>それでも現実は、まだ理想と遠い。</h2>
-      </div>
-      <div class="lead-paragraphs">
-        <p>でも現実は――理想通りに進まない。心のどこかで「本当の自分を見せたら嫌われるかも」と感じ、ブレーキを踏んでしまう瞬間が続いていませんか。</p>
+        <h2>そんな未来が叶ったら最高だけど、現実は…</h2>
       </div>
       <ul class="bullet-list">
         <li>自分を偽って演じ続けることに違和感を覚えている。</li>
@@ -1115,8 +1126,10 @@
         <li>このまま一生孤独なのではと、不安を抱えたまま夜を迎えてしまう。</li>
       </ul>
       <div class="lead-paragraphs">
-        <p>YouTubeや教材で学び、マッチングアプリや結婚相談所、美容室や脱毛にも投資してきた。それでも成果につながらないのは、あなたの努力が足りないからではありません。</p>
-        <p><strong>むしろ、その努力が逆効果になっている可能性すらある。</strong>次に何を信じればいいかわからなくなったなら、この先の話を聞いてください。</p>
+        <p>このように悩み続けているのではないでしょうか？</p> 
+        <p>そんな現実を変えるために、YouTubeや教材で学び、マッチングアプリや結婚相談所、美容室や脱毛にも投資してきた。それでも成果につながらない…</p>
+        <p>もし、<strong>その努力が逆効果になっている可能性があるとしたら、、、</strong>あなたはどう思いますか？</p>
+        <p>この問いにドキッとしたなら、どうかこのままページを読み進めてください。</p>
       </div>
     </div>
   </section>
@@ -1124,12 +1137,12 @@
   <section class="section light" id="cause">
     <div class="container">
       <div class="section-title">
-        <h2>「モテる男」を追いかけるほど魅力がかき消される理由</h2>
+        <h2>「モテる男」になろうとすればするほど、あなたの魅力がかき消されていく残酷な理由</h2>
       </div>
       <div class="lead-paragraphs">
-        <p>あなたが成果につながらない一番の原因は、<strong>「モテる男」になることを目指してしまったから</strong>。巷のノウハウに沿うほど、本当の自分を隠すことになり、違和感だけが増していきます。</p>
-        <p><strong>本当の自分を隠す</strong> → <strong>価値観や強みがわからなくなる</strong> → <strong>あなたのオリジナリティがなくなる</strong> → <strong>魅力が消えていく</strong>。この連鎖が続けば、女性からは「どこにでもいる人」にしか映りません。</p>
-        <p>恋愛講師によって“理想のモテ男”がテンプレ化された今、女性は量産型の男性にうんざりしています。求められているのは「この人じゃなきゃダメ」と思わせる希少性。つまりあなた自身の誠実さや価値観を磨くことこそ、最短の攻略法なのです。</p>
+        <p>あなたが成果につながらない一番の原因は、<strong>「モテる男」になることを目指してしまったから</strong>。<br>モテる男を目指すということは、モテる男を擬態することになり、<strong>あなたの本当の姿を隠すことになります。</strong><br>その結果、あなたには違和感だけが増していきます。</p>
+        <p>そして、<strong>本当の自分を隠す</strong> → <strong>価値観や強みがわからなくなる</strong> → <strong>あなたのオリジナリティがなくなる</strong> → <strong>魅力が消えていく</strong>。<br>という負のループに陥ることになります。<br>その結果、モテる男の劣化版になってしまうんです。</p>
+        <p>さらに、そういった巷の恋愛ノウハウによって“モテる男”になることがテンプレ化された今、女性は自己中心的な男性にうんざりしているんです。<br>女性が求められているのは<strong> 「この人じゃなきゃダメ」と思わせる独自の魅力を持つ男</strong>です。<br>つまり、あなた自身の価値観や強みを言語化して、女性にとって<strong> 唯一無二の魅力を持つ男になることこそ、あなたに最適な方法なんです。</strong></p>
       </div>
     </div>
   </section>
@@ -1141,30 +1154,30 @@
       </div>
       <div class="card-grid">
         <div class="card">
-          <figure class="card-visual card-visual--authentic">
+          <figure class="card-visual card-visual--unique-charm">
             <picture>
-              <source srcset="assets/images/card-authentic.webp" type="image/webp">
-              <img alt="自然体で微笑むふたりのイメージ" loading="lazy" src="assets/images/card-authentic.jpg">
+              <source srcset="assets/images/card-unique-charm.webp" type="image/webp">
+              <img alt="自然体で微笑むふたりのイメージ" loading="lazy" src="assets/images/card-unique-charm.jpg">
             </picture>
           </figure>
           <h3>独自の魅力を構築する</h3>
           <p>内面・外見・背景までを丁寧に整理し、誠実さや価値観を言語化。自然体のまま惹きつける“唯一無二の魅力”を設計します。</p>
         </div>
         <div class="card">
-          <figure class="card-visual card-visual--weapon">
+          <figure class="card-visual card-visual--unique-path">
             <picture>
-              <source srcset="assets/images/card-weapon.webp" type="image/webp">
-              <img alt="自分の強みを象徴する光のイメージ" loading="lazy" src="assets/images/card-weapon.jpg">
+              <source srcset="assets/images/card-unique-path.webp" type="image/webp">
+              <img alt="自分の強みを象徴する光のイメージ" loading="lazy" src="assets/images/card-unique-path.jpg">
             </picture>
           </figure>
           <h3>強みが活きる出会い方を選ぶ</h3>
           <p>3C（あなた・相手・場）の視点で出会い方を再構築。あなたの強みが活きるフィールドで、本命の女性と自然に巡り合う導線を整えます。</p>
         </div>
         <div class="card">
-          <figure class="card-visual card-visual--confidence">
+          <figure class="card-visual card-visual--unique-communication">
             <picture>
-              <source srcset="assets/images/card-confidence.webp" type="image/webp">
-              <img alt="深くつながる会話のイメージ" loading="lazy" src="assets/images/card-confidence.jpg">
+              <source srcset="assets/images/card-unique-communication.webp" type="image/webp">
+              <img alt="深くつながる会話のイメージ" loading="lazy" src="assets/images/card-unique-communication.jpg">
             </picture>
           </figure>
           <h3>深層心理コミュニケーション</h3>
@@ -1203,30 +1216,30 @@
       </div>
       <div class="card-grid">
         <div class="card">
-          <figure class="card-visual card-visual--time">
+          <figure class="card-visual card-visual--pillar-strategy">
             <picture>
-              <source srcset="assets/images/card-time.webp" type="image/webp">
-              <img alt="未来のロードマップのイメージ" loading="lazy" src="assets/images/card-time.jpg">
+              <source srcset="assets/images/card-pillar-strategy.webp" type="image/webp">
+              <img alt="未来のロードマップのイメージ" loading="lazy" src="assets/images/card-pillar-strategy.jpg">
             </picture>
           </figure>
           <h3>戦略</h3>
           <p>あなた専用のロードマップを設計し、明日から何を積み上げれば理想の女性と出会い、関係を深められるかを明確にします。</p>
         </div>
         <div class="card">
-          <figure class="card-visual card-visual--graduate">
+          <figure class="card-visual card-visual--pillar-feedback">
             <picture>
-              <source srcset="assets/images/card-graduate.webp" type="image/webp">
-              <img alt="伴走するコーチのイメージ" loading="lazy" src="assets/images/card-graduate.jpg">
+              <source srcset="assets/images/card-pillar-feedback.webp" type="image/webp">
+              <img alt="伴走するコーチのイメージ" loading="lazy" src="assets/images/card-pillar-feedback.jpg">
             </picture>
           </figure>
           <h3>フィードバック</h3>
           <p>実践のたびにプロが細かく振り返り、軌道修正をサポート。あなたの魅力が正しく伝わっているかをリアルタイムで確認します。</p>
         </div>
         <div class="card">
-          <figure class="card-visual card-visual--authentic">
+          <figure class="card-visual card-visual--pillar-environment">
             <picture>
-              <source srcset="assets/images/card-authentic.webp" type="image/webp">
-              <img alt="安心できるコミュニティのイメージ" loading="lazy" src="assets/images/card-authentic.jpg">
+              <source srcset="assets/images/card-pillar-environment.webp" type="image/webp">
+              <img alt="安心できるコミュニティのイメージ" loading="lazy" src="assets/images/card-pillar-environment.jpg">
             </picture>
           </figure>
           <h3>環境</h3>
