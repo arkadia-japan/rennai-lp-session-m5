@@ -599,14 +599,35 @@
 
     .profile-visual--square { aspect-ratio: 1 / 1; }
     .profile-visual--landscape { aspect-ratio: 16 / 9; }
-    .profile-visual--team { width: min(460px, 100%); background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(233, 240, 255, 0.92)); }
-    .profile-visual--overview { width: min(680px, 100%); }
+    .profile-visual--team {
+      width: min(420px, 100%);
+      padding: 0;
+      border-width: 2px;
+      border-radius: 30px;
+      aspect-ratio: auto;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(233, 240, 255, 0.92));
+    }
+    .profile-visual--overview {
+      width: min(680px, 100%);
+      padding: 0;
+      border-width: 2px;
+      border-radius: 28px;
+      aspect-ratio: auto;
+    }
 
     .profile-visual img {
       width: 100%;
       height: 100%;
       border-radius: 32px;
       object-fit: cover;
+    }
+    .profile-visual--team img {
+      border-radius: 30px;
+      height: auto;
+    }
+    .profile-visual--overview img {
+      border-radius: 28px;
+      height: auto;
     }
 
     .consultant-groups {
