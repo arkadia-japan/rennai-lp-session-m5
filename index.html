@@ -636,13 +636,23 @@
       width: 260px;
       height: 260px;
       border-radius: 50%;
-      padding: 24px;
+      padding: 0;
       background: rgba(255, 255, 255, 0.95);
       box-shadow: 0 18px 30px rgba(12, 38, 96, 0.18);
       display: flex;
       align-items: center;
       justify-content: center;
       border: 3px solid rgba(198, 162, 74, 0.25);
+      overflow: hidden;
+    }
+
+    .avatar picture,
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
     }
 
     .avatar--female-a { background: linear-gradient(135deg, #ffe1f1, #ffd7ff); }
@@ -1006,8 +1016,8 @@
 <body>
   <header class="hero">
     <picture class="hero-visual">
-      <source media="(max-width: 900px)" srcset="renai_session_sp.png">
-      <img src="renai_session_pc.png" alt="THE ONLY ONE 個別相談会のキービジュアル">
+      <source media="(max-width: 900px)" srcset="renai_session_sp.webp">
+      <img src="renai_session_pc.webp" alt="THE ONLY ONE 個別相談会のキービジュアル">
     </picture>
     <div class="hero-inner">
       <div class="hero-panel">
@@ -1041,7 +1051,7 @@
           <figure class="card-visual card-visual--authentic">
             <picture>
               <source srcset="assets/images/card-authentic.webp" type="image/webp">
-              <img alt="自然体で微笑むふたりのイメージ" loading="lazy" src="assets/images/card-authentic.jpg">
+              <img alt="自然体で微笑むふたりのイメージ" loading="lazy" src="assets/images/card-authentic.webp">
             </picture>
           </figure>
           <h3>自分を偽らず、自然体で恋愛ができる</h3>
@@ -1051,7 +1061,7 @@
           <figure class="card-visual card-visual--weapon">
             <picture>
               <source srcset="assets/images/card-weapon.webp" type="image/webp">
-              <img alt="自分の魅力を象徴する光のイメージ" loading="lazy" src="assets/images/card-weapon.jpg">
+              <img alt="自分の魅力を象徴する光のイメージ" loading="lazy" src="assets/images/card-weapon.webp">
             </picture>
           </figure>
           <h3>純粋でピュアな本当の自分を受け入れてもらえる恋愛ができる</h3>
@@ -1061,7 +1071,7 @@
           <figure class="card-visual card-visual--graduate">
             <picture>
               <source srcset="assets/images/card-graduate.webp" type="image/webp">
-              <img alt="本命女性と向き合うイメージ" loading="lazy" src="assets/images/card-graduate.jpg">
+              <img alt="本命女性と向き合うイメージ" loading="lazy" src="assets/images/card-graduate.webp">
             </picture>
           </figure>
           <h3>失うのが怖いくらい好きになった女性と付き合える</h3>
@@ -1071,7 +1081,7 @@
           <figure class="card-visual card-visual--confidence">
             <picture>
               <source srcset="assets/images/card-confidence.webp" type="image/webp">
-              <img alt="深い信頼で結ばれたふたりのイメージ" loading="lazy" src="assets/images/card-confidence.jpg">
+              <img alt="深い信頼で結ばれたふたりのイメージ" loading="lazy" src="assets/images/card-confidence.webp">
             </picture>
           </figure>
           <h3>付き合った女性と心の奥で深く繋がり長期的な関係を築ける</h3>
@@ -1081,7 +1091,7 @@
           <figure class="card-visual card-visual--time">
             <picture>
               <source srcset="assets/images/card-time.webp" type="image/webp">
-              <img alt="笑顔でデートを楽しむイメージ" loading="lazy" src="assets/images/card-time.jpg">
+              <img alt="笑顔でデートを楽しむイメージ" loading="lazy" src="assets/images/card-time.webp">
             </picture>
           </figure>
           <h3>苦行のようなデートをやめて心の底からデートを楽しめる</h3>
@@ -1091,7 +1101,7 @@
           <figure class="card-visual card-visual--values">
             <picture>
               <source srcset="assets/images/card-values.webp" type="image/webp">
-              <img alt="力強く輝くコンパスのイメージ" loading="lazy" src="assets/images/card-values.jpg">
+              <img alt="力強く輝くコンパスのイメージ" loading="lazy" src="assets/images/card-values.webp">
             </picture>
           </figure>
           <h3>自分の価値観に誇りを持ち堂々と伝えられるようにできる</h3>
@@ -1101,7 +1111,7 @@
           <figure class="card-visual card-visual--partner">
             <picture>
               <source srcset="assets/images/card-partner.webp" type="image/webp">
-              <img alt="生涯のパートナーシップを象徴するイメージ" loading="lazy" src="assets/images/card-partner.jpg">
+              <img alt="生涯のパートナーシップを象徴するイメージ" loading="lazy" src="assets/images/card-partner.webp">
             </picture>
           </figure>
           <h3>死ぬ前に悲しんでくれる一生涯のパートナーと結ばれることができる</h3>
@@ -1157,7 +1167,7 @@
           <figure class="card-visual card-visual--unique-charm">
             <picture>
               <source srcset="assets/images/card-unique-charm.webp" type="image/webp">
-              <img alt="自然体で微笑むふたりのイメージ" loading="lazy" src="assets/images/card-unique-charm.jpg">
+              <img alt="自然体で微笑むふたりのイメージ" loading="lazy" src="assets/images/card-unique-charm.webp">
             </picture>
           </figure>
           <h3>独自の魅力を構築する</h3>
@@ -1167,7 +1177,7 @@
           <figure class="card-visual card-visual--unique-path">
             <picture>
               <source srcset="assets/images/card-unique-path.webp" type="image/webp">
-              <img alt="自分の強みを象徴する光のイメージ" loading="lazy" src="assets/images/card-unique-path.jpg">
+              <img alt="自分の強みを象徴する光のイメージ" loading="lazy" src="assets/images/card-unique-path.webp">
             </picture>
           </figure>
           <h3>強みが活きる出会い方を選ぶ</h3>
@@ -1177,7 +1187,7 @@
           <figure class="card-visual card-visual--unique-communication">
             <picture>
               <source srcset="assets/images/card-unique-communication.webp" type="image/webp">
-              <img alt="深くつながる会話のイメージ" loading="lazy" src="assets/images/card-unique-communication.jpg">
+              <img alt="深くつながる会話のイメージ" loading="lazy" src="assets/images/card-unique-communication.webp">
             </picture>
           </figure>
           <h3>深層心理コミュニケーション</h3>
@@ -1219,7 +1229,7 @@
           <figure class="card-visual card-visual--pillar-strategy">
             <picture>
               <source srcset="assets/images/card-pillar-strategy.webp" type="image/webp">
-              <img alt="未来のロードマップのイメージ" loading="lazy" src="assets/images/card-pillar-strategy.jpg">
+              <img alt="未来のロードマップのイメージ" loading="lazy" src="assets/images/card-pillar-strategy.webp">
             </picture>
           </figure>
           <h3>戦略</h3>
@@ -1229,7 +1239,7 @@
           <figure class="card-visual card-visual--pillar-feedback">
             <picture>
               <source srcset="assets/images/card-pillar-feedback.webp" type="image/webp">
-              <img alt="伴走するコーチのイメージ" loading="lazy" src="assets/images/card-pillar-feedback.jpg">
+              <img alt="伴走するコーチのイメージ" loading="lazy" src="assets/images/card-pillar-feedback.webp">
             </picture>
           </figure>
           <h3>フィードバック</h3>
@@ -1239,7 +1249,7 @@
           <figure class="card-visual card-visual--pillar-environment">
             <picture>
               <source srcset="assets/images/card-pillar-environment.webp" type="image/webp">
-              <img alt="安心できるコミュニティのイメージ" loading="lazy" src="assets/images/card-pillar-environment.jpg">
+              <img alt="安心できるコミュニティのイメージ" loading="lazy" src="assets/images/card-pillar-environment.webp">
             </picture>
           </figure>
           <h3>環境</h3>
@@ -1286,7 +1296,7 @@
 
             <source srcset="assets/images/voice-idol.webp" type="image/webp">
 
-            <img alt="スポットライトが輝くステージのイメージ" loading="lazy" src="assets/images/voice-idol.jpg">
+            <img alt="スポットライトが輝くステージのイメージ" loading="lazy" src="assets/images/voice-idol.webp">
 
           </picture>
         </figure>
@@ -1299,7 +1309,7 @@
 
             <source srcset="assets/images/voice-marriage.webp" type="image/webp">
 
-            <img alt="婚約指輪と柔らかな光のイメージ" loading="lazy" src="assets/images/voice-marriage.jpg">
+            <img alt="婚約指輪と柔らかな光のイメージ" loading="lazy" src="assets/images/voice-marriage.webp">
 
           </picture>
         </figure>
@@ -1312,7 +1322,7 @@
 
             <source srcset="assets/images/voice-connection.webp" type="image/webp">
 
-            <img alt="心がつながる二人のイメージ" loading="lazy" src="assets/images/voice-connection.jpg">
+            <img alt="心がつながる二人のイメージ" loading="lazy" src="assets/images/voice-connection.webp">
 
           </picture>
         </figure>
@@ -1331,7 +1341,7 @@
 
             <source srcset="assets/images/evidence-01.webp" type="image/webp">
 
-            <img alt="Evidence 01 実績スクリーンショット" loading="lazy" src="assets/images/evidence-01.jpg">
+            <img alt="Evidence 01 実績スクリーンショット" loading="lazy" src="assets/images/evidence-01.webp">
 
           </picture>
         </figure>
@@ -1340,7 +1350,7 @@
 
             <source srcset="assets/images/evidence-02.webp" type="image/webp">
 
-            <img alt="Evidence 02 実績スクリーンショット" loading="lazy" src="assets/images/evidence-02.jpg">
+            <img alt="Evidence 02 実績スクリーンショット" loading="lazy" src="assets/images/evidence-02.webp">
 
           </picture>
         </figure>
@@ -1349,7 +1359,7 @@
 
             <source srcset="assets/images/evidence-03.webp" type="image/webp">
 
-            <img alt="Evidence 03 実績スクリーンショット" loading="lazy" src="assets/images/evidence-03.jpg">
+            <img alt="Evidence 03 実績スクリーンショット" loading="lazy" src="assets/images/evidence-03.webp">
 
           </picture>
         </figure>
@@ -1365,7 +1375,7 @@
       <div class="profile">
         <div class="profile-block">
           <figure class="profile-visual profile-visual--square" style="width:min(320px, 85%);">
-            <img src="profile.jpg" alt="恋愛戦略家けいじのプロフィール写真" loading="lazy">
+            <img src="profile.webp" alt="恋愛戦略家けいじのプロフィール写真" loading="lazy">
           </figure>
           <h3>主宰者紹介｜けいじ<br><span style="font-size:14px; font-weight:400;">「いい人止まり」を“唯一無二”の魅力に変える恋愛戦略家</span></h3>
           <ul>
@@ -1381,7 +1391,7 @@
 
               <source srcset="assets/images/team-support.webp" type="image/webp">
 
-              <img alt="男女コンサルタントチームが戦略を練る様子" loading="lazy" src="assets/images/team-support.jpg">
+              <img alt="男女コンサルタントチームが戦略を練る様子" loading="lazy" src="assets/images/team-support.webp">
 
             </picture>
           </figure>
@@ -1396,7 +1406,7 @@
 
                     <source srcset="assets/images/consultant-female-a.webp" type="image/webp">
 
-                    <img alt="女性コンサルタント A の写真" loading="lazy" src="assets/images/consultant-female-a.jpg">
+                    <img alt="女性コンサルタント A の写真" loading="lazy" src="assets/images/consultant-female-a.webp">
 
                   </picture>
                 </figure>
@@ -1405,7 +1415,7 @@
 
                     <source srcset="assets/images/consultant-female-b.webp" type="image/webp">
 
-                    <img alt="女性コンサルタント B の写真" loading="lazy" src="assets/images/consultant-female-b.jpg">
+                    <img alt="女性コンサルタント B の写真" loading="lazy" src="assets/images/consultant-female-b.webp">
 
                   </picture>
                 </figure>
@@ -1420,7 +1430,7 @@
 
                     <source srcset="assets/images/consultant-male-a.webp" type="image/webp">
 
-                    <img alt="男性コンサルタント A の写真" loading="lazy" src="assets/images/consultant-male-a.jpg">
+                    <img alt="男性コンサルタント A の写真" loading="lazy" src="assets/images/consultant-male-a.webp">
 
                   </picture>
                 </figure>
@@ -1429,7 +1439,7 @@
 
                     <source srcset="assets/images/consultant-male-b.webp" type="image/webp">
 
-                    <img alt="男性コンサルタント B の写真" loading="lazy" src="assets/images/consultant-male-b.jpg">
+                    <img alt="男性コンサルタント B の写真" loading="lazy" src="assets/images/consultant-male-b.webp">
 
                   </picture>
                 </figure>
@@ -1472,7 +1482,7 @@
 
             <source srcset="assets/images/consultation-overview.webp" type="image/webp">
 
-            <img alt="個別相談会概要のイメージ" loading="lazy" src="assets/images/consultation-overview.jpg">
+            <img alt="個別相談会概要のイメージ" loading="lazy" src="assets/images/consultation-overview.webp">
 
           </picture>
         </figure>
