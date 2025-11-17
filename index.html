@@ -768,7 +768,7 @@
 
     .timeline-step::before {
       counter-increment: timeline;
-      content: "";
+      content: counter(timeline);
       position: absolute;
       left: 12px;
       top: 26px;
@@ -989,7 +989,7 @@
       .timeline::before { display: none; }
       .timeline-step { padding: 28px 28px 28px 52px; }
       .timeline-step::before {
-        content: "";
+        content: counter(timeline);
         left: 12px;
         top: 28px;
         width: 42px;
