@@ -1282,6 +1282,17 @@
     </div>
   </section>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var headings = document.querySelectorAll('.timeline-step h4');
+      var re = /^\s*[0-9０-９]+[\.．]\s*/;
+      headings.forEach(function (el) {
+        var t = el.textContent || '';
+        el.textContent = t.replace(re, '');
+      });
+    });
+  </script>
+
   <section class="section light" id="common-enemy">
     <div class="container">
       <div class="section-title">
