@@ -762,26 +762,26 @@
     }
 
     .timeline-step {
-      padding: 32px;
+      padding: 32px 32px 32px 88px;
       overflow: visible;
     }
 
     .timeline-step::before {
       counter-increment: timeline;
-      content: none;
+      content: "";
       position: absolute;
       left: 12px;
       top: 26px;
       width: 56px;
       height: 56px;
       border-radius: 50%;
-      background: transparent;
-      display: none;
+      background: linear-gradient(135deg, var(--gold-light), rgba(198, 162, 74, 0.6));
+      display: grid;
       place-items: center;
       font-weight: 700;
       font-size: 20px;
       color: var(--navy-dark);
-      box-shadow: none;
+      box-shadow: 0 12px 24px rgba(12, 38, 96, 0.18);
       z-index: 2;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -987,10 +987,15 @@
       .first-lead { padding: 72px 0 52px; margin-top: 0; }
       .timeline { padding-left: 0; }
       .timeline::before { display: none; }
-      .timeline-step { padding: 28px; }
+      .timeline-step { padding: 28px 28px 28px 52px; }
       .timeline-step::before {
-        content: none;
-        display: none;
+        content: "";
+        left: 12px;
+        top: 28px;
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+        box-shadow: 0 8px 18px rgba(12, 38, 96, 0.16);
       }
       :root { --container-gutter: clamp(12px, 5vw, 24px); }
     }
